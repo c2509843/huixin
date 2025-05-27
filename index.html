@@ -69,19 +69,45 @@ background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
 <nav class="fixed top-0 w-full bg-white shadow-md z-50">
 <div class="max-w-7xl mx-auto px-4">
 <div class="flex justify-between items-center h-20">
-<a href="index.html" class="font-['Pacifico'] text-4xl text-primary flex items-center">
+<a href="index.html" class="font-['Pacifico'] text-2xl md:text-4xl text-primary flex items-center">
 惠鑫工作室
 </a>
-<div class="flex space-x-12">
-<a href="index.html" class="nav-link text-gray-700 hover:text-primary text-lg">首页</a>
-<a href="music.html" class="nav-link text-gray-700 hover:text-primary text-lg">音乐制作</a>
-<a href="service.html" class="nav-link text-gray-700 hover:text-primary text-lg">服务项目</a>
-<a href="about.html" class="nav-link text-gray-700 hover:text-primary text-lg">关于我们</a>
-<a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-lg">联系我们</a>
+
+<!-- 桌面导航 -->
+<div class="hidden md:flex space-x-6 lg:space-x-12">
+<a href="index.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">首页</a>
+<a href="music.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">音乐制作</a>
+<a href="service.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">服务项目</a>
+<a href="about.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">关于我们</a>
+<a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">联系我们</a>
 </div>
+
+<!-- 移动端汉堡菜单按钮 -->
+<button id="mobileMenuBtn" class="md:hidden text-2xl text-primary">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+
+<!-- 移动端菜单 -->
+<div id="mobileMenu" class="md:hidden hidden absolute top-20 left-0 w-full bg-white shadow-lg py-4 px-6">
+<a href="index.html" class="block py-2 text-gray-700 hover:text-primary">首页</a>
+<a href="music.html" class="block py-2 text-gray-700 hover:text-primary">音乐制作</a>
+<a href="service.html" class="block py-2 text-gray-700 hover:text-primary">服务项目</a>
+<a href="about.html" class="block py-2 text-gray-700 hover:text-primary">关于我们</a>
+<a href="contact.html" class="block py-2 text-gray-700 hover:text-primary">联系我们</a>
 </div>
 </div>
 </nav>
+
+<script>
+// 移动端菜单切换
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+mobileMenuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+</script>
 <div class="fixed top-20 w-full z-40">
 <div class="max-w-7xl mx-auto px-4">
 <div class="music-player p-4 text-white rounded-b-lg">
@@ -143,32 +169,32 @@ bgMusic.addEventListener('play', () => {
 <section class="py-20 bg-gray-50">
 <div class="max-w-7xl mx-auto px-4">
 <h2 class="text-3xl font-bold text-center mb-16">我们的服务</h2>
-<div class="grid grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-48 overflow-hidden">
+<div class="h-40 sm:h-48 overflow-hidden">
 <img src="https://ai-public.mastergo.com/ai/img_res/9d4d2f33b85a1a4b59247941a4e34e99.jpg" class="w-full h-full object-cover" alt="音乐制作">
 </div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-4">音乐制作</h3>
-<p class="text-gray-600">专业的录音棚设备，经验丰富的制作团队，为您打造完美音乐作品</p>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-4">音乐制作</h3>
+<p class="text-gray-600 text-sm sm:text-base">专业的录音棚设备，经验丰富的制作团队，为您打造完美音乐作品</p>
 </div>
 </div>
 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-48 overflow-hidden">
+<div class="h-40 sm:h-48 overflow-hidden">
 <img src="https://ai-public.mastergo.com/ai/img_res/b498b9ebf85e839a3d66a9e85e1f4914.jpg" class="w-full h-full object-cover" alt="游戏开发">
 </div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-4">游戏开发</h3>
-<p class="text-gray-600">创意游戏设计，专业技术支持，打造独特的游戏体验</p>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-4">游戏开发</h3>
+<p class="text-gray-600 text-sm sm:text-base">创意游戏设计，专业技术支持，打造独特的游戏体验</p>
 </div>
 </div>
 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-48 overflow-hidden">
+<div class="h-40 sm:h-48 overflow-hidden">
 <img src="https://ai-public.mastergo.com/ai/img_res/3da3b31e8411bc8f535a0bc5b47701e7.jpg" class="w-full h-full object-cover" alt="小程序开发">
 </div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-4">小程序开发</h3>
-<p class="text-gray-600">定制化小程序解决方案，助力企业数字化转型</p>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-4">小程序开发</h3>
+<p class="text-gray-600 text-sm sm:text-base">定制化小程序解决方案，助力企业数字化转型</p>
 </div>
 </div>
 </div>
@@ -177,18 +203,18 @@ bgMusic.addEventListener('play', () => {
 <section class="py-20">
 <div class="max-w-7xl mx-auto px-4">
 <h2 class="text-3xl font-bold text-center mb-16">最新作品</h2>
-<div class="grid grid-cols-4 gap-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 <div class="rounded-lg overflow-hidden shadow-lg">
-<img src="https://ai-public.mastergo.com/ai/img_res/8c0058696c915e9f626ee1b3aefae42c.jpg" class="w-full h-[300px] object-cover" alt="作品1">
+<img src="https://ai-public.mastergo.com/ai/img_res/8c0058696c915e9f626ee1b3aefae42c.jpg" class="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover" alt="作品1">
 </div>
 <div class="rounded-lg overflow-hidden shadow-lg">
-<img src="https://ai-public.mastergo.com/ai/img_res/957ddc32462de91387550d906b720693.jpg" class="w-full h-[300px] object-cover" alt="作品2">
+<img src="https://ai-public.mastergo.com/ai/img_res/957ddc32462de91387550d906b720693.jpg" class="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover" alt="作品2">
 </div>
 <div class="rounded-lg overflow-hidden shadow-lg">
-<img src="https://ai-public.mastergo.com/ai/img_res/31db559207fcf31305a1956a519991e0.jpg" class="w-full h-[300px] object-cover" alt="作品3">
+<img src="https://ai-public.mastergo.com/ai/img_res/31db559207fcf31305a1956a519991e0.jpg" class="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover" alt="作品3">
 </div>
 <div class="rounded-lg overflow-hidden shadow-lg">
-<img src="https://ai-public.mastergo.com/ai/img_res/95e33b869912cca031f4290aa55e3312.jpg" class="w-full h-[300px] object-cover" alt="作品4">
+<img src="https://ai-public.mastergo.com/ai/img_res/95e33b869912cca031f4290aa55e3312.jpg" class="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover" alt="作品4">
 </div>
 </div>
 </div>
@@ -537,44 +563,6 @@ return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 </script>
 </div>
-<div id="lyricsSection" class="p-6 bg-white rounded-xl shadow-lg mt-8 max-w-3xl mx-auto transition-all duration-300">
-    <div class="flex justify-between items-center mb-6">
-        <h4 class="text-2xl font-bold text-primary flex items-center">
-            <i class="fas fa-music mr-2"></i>歌词
-        </h4>
-        <div class="flex space-x-2">
-            <button id="fontSizeDown" class="text-gray-500 hover:text-primary">
-                <i class="fas fa-font"></i> <i class="fas fa-minus"></i>
-            </button>
-            <button id="fontSizeUp" class="text-gray-500 hover:text-primary">
-                <i class="fas fa-font"></i> <i class="fas fa-plus"></i>
-            </button>
-        </div>
-    </div>
-    <div id="lyricsContent" class="space-y-4 max-h-[32rem] overflow-y-auto p-6 bg-gray-50 rounded-lg scroll-smooth text-base">
-        <p class="text-center text-gray-500 py-8">暂无歌词</p>
-    </div>
-    <div class="mt-4 text-right text-sm text-gray-400">
-        <span id="lyricsStatus">准备就绪</span>
-    </div>
-</div>
-
-<script>
-// 歌词字体大小控制
-let fontSize = 16;
-document.getElementById('fontSizeUp').addEventListener('click', () => {
-    if(fontSize < 24) {
-        fontSize += 2;
-        document.getElementById('lyricsContent').style.fontSize = `${fontSize}px`;
-    }
-});
-document.getElementById('fontSizeDown').addEventListener('click', () => {
-    if(fontSize > 12) {
-        fontSize -= 2;
-        document.getElementById('lyricsContent').style.fontSize = `${fontSize}px`;
-    }
-});
-</script>
 </div>
 </div>
 </section>

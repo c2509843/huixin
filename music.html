@@ -66,19 +66,45 @@ cursor: pointer;
 <nav class="fixed top-0 w-full bg-white shadow-md z-50">
 <div class="max-w-7xl mx-auto px-4">
 <div class="flex justify-between items-center h-20">
-<a href="index.html" class="font-['Pacifico'] text-4xl text-primary flex items-center">
+<a href="index.html" class="font-['Pacifico'] text-2xl md:text-4xl text-primary flex items-center">
 惠鑫工作室
 </a>
-<div class="flex space-x-12">
-<a href="index.html" class="nav-link text-gray-700 hover:text-primary text-lg">首页</a>
-<a href="music.html" class="nav-link text-gray-700 hover:text-primary text-lg active">音乐制作</a>
-<a href="service.html" class="nav-link text-gray-700 hover:text-primary text-lg">服务项目</a>
-<a href="about.html" class="nav-link text-gray-700 hover:text-primary text-lg">关于我们</a>
-<a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-lg">联系我们</a>
+
+<!-- 桌面导航 -->
+<div class="hidden md:flex space-x-6 lg:space-x-12">
+<a href="index.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">首页</a>
+<a href="music.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg active">音乐制作</a>
+<a href="service.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">服务项目</a>
+<a href="about.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">关于我们</a>
+<a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-base lg:text-lg">联系我们</a>
 </div>
+
+<!-- 移动端汉堡菜单按钮 -->
+<button id="mobileMenuBtn" class="md:hidden text-2xl text-primary">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+
+<!-- 移动端菜单 -->
+<div id="mobileMenu" class="md:hidden hidden absolute top-20 left-0 w-full bg-white shadow-lg py-4 px-6">
+<a href="index.html" class="block py-2 text-gray-700 hover:text-primary">首页</a>
+<a href="music.html" class="block py-2 text-gray-700 hover:text-primary active">音乐制作</a>
+<a href="service.html" class="block py-2 text-gray-700 hover:text-primary">服务项目</a>
+<a href="about.html" class="block py-2 text-gray-700 hover:text-primary">关于我们</a>
+<a href="contact.html" class="block py-2 text-gray-700 hover:text-primary">联系我们</a>
 </div>
 </div>
 </nav>
+
+<script>
+// 移动端菜单切换
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+mobileMenuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+</script>
 <section class="hero-section min-h-[600px] flex items-center pt-24 pb-16">
 <div class="max-w-7xl mx-auto px-4">
 <div class="bg-white bg-opacity-95 p-12 rounded-lg max-w-2xl backdrop-blur-sm">
