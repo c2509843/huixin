@@ -1,0 +1,263 @@
+/* 平板设备样式 (768px - 1199px) */
+@media (max-width: 1199px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 移动设备样式 (767px以下) */
+@media (max-width: 767px) {
+    .navbar .container {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-links {
+        display: none; /* 移动端导航将使用汉堡菜单 */
+    }
+    
+    .hero {
+        height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-item {
+        padding: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* 移动端汉堡菜单样式 */
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #FF6B6B;
+        cursor: pointer;
+    }
+    
+    .mobile-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: none;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .mobile-menu ul {
+        list-style: none;
+    }
+    
+    .mobile-menu li {
+        margin-bottom: 15px;
+    }
+    
+    .mobile-menu a {
+        color: #2C3E50;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+
+/* 超大屏幕样式 (1200px以上) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+}
+
+/* 音乐制作页面响应式样式 */
+@media (max-width: 1199px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .music-banner {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .music-banner {
+        height: 300px;
+        margin-top: 60px;
+    }
+    
+    .work-card, .step {
+        padding: 15px;
+    }
+    
+    .player-interface {
+        padding: 20px;
+    }
+    
+    .play-btn {
+        padding: 8px 15px;
+        margin-right: 15px;
+    }
+
+    /* 服务项目页面响应式样式 */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-plans {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-banner {
+        height: 300px;
+        margin-top: 60px;
+    }
+    
+    .service-item, .plan, .testimonial {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-plans {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-banner {
+        height: 350px;
+    }
+
+    /* 关于我们页面响应式样式 */
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .environment-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-banner {
+        height: 300px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .environment-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-banner {
+        height: 350px;
+    }
+
+    /* 联系我们页面响应式样式 */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form,
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .map-placeholder {
+        height: 200px;
+    }
+    
+    .contact-banner {
+        height: 300px;
+        margin-top: 60px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .contact-wrapper {
+        gap: 30px;
+    }
+    
+    .contact-banner {
+        height: 350px;
+    }
+}

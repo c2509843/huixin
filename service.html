@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服务项目 - 惠鑫工作室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF6B6B',
+secondary: '#4ECDC4'
+},
+borderRadius: {
+'none': '0px',
+'sm': '2px',
+DEFAULT: '4px',
+'md': '8px',
+'lg': '12px',
+'xl': '16px',
+'2xl': '20px',
+'3xl': '24px',
+'full': '9999px',
+'button': '4px'
+}
+}
+}
+}
+</script>
+<style>
+body {
+min-height: 1024px;
+}
+.hero-section {
+background-image: url('https://ai-public.mastergo.com/ai/img_res/b76da9f0af8a72f09507b9bcc2009ccb.jpg');
+background-size: cover;
+background-position: center;
+}
+.masonry-grid {
+column-count: 3;
+column-gap: 20px;
+}
+.masonry-item {
+break-inside: avoid;
+margin-bottom: 20px;
+}
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+            <a href="index.html" class="font-['Pacifico'] text-4xl text-primary flex items-center">
+                惠鑫工作室
+            </a>
+            <div class="flex space-x-12">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-primary text-lg">首页</a>
+                <a href="music.html" class="nav-link text-gray-700 hover:text-primary text-lg">音乐制作</a>
+                <a href="service.html" class="nav-link text-gray-700 hover:text-primary text-lg active">服务项目</a>
+                <a href="about.html" class="nav-link text-gray-700 hover:text-primary text-lg">关于我们</a>
+                <a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-lg">联系我们</a>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+<section class="hero-section pt-32 pb-20">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold text-white mb-6">创新科技，助力未来</h1>
+<p class="text-xl text-white mb-8">专注于音乐、游戏和小程序开发的创新工作室，为您提供专业的技术解决方案</p>
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">了解更多</button>
+</div>
+</div>
+</section>
+<section id="services" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16">服务项目</h2>
+<div class="grid grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+<img src="https://ai-public.mastergo.com/ai/img_res/7c6e5d455abc98941a4e97537da44c36.jpg" class="w-full h-48 object-cover rounded-lg mb-6" alt="音乐服务">
+<h3 class="text-2xl font-bold mb-4">音乐制作</h3>
+<p class="text-gray-600">专业的音乐制作团队，提供作曲、编曲、混音等全方位服务</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+<img src="https://ai-public.mastergo.com/ai/img_res/5c8bfb0aaa44fdc7476fb5166b0a7a5e.jpg" class="w-full h-48 object-cover rounded-lg mb-6" alt="游戏开发">
+<h3 class="text-2xl font-bold mb-4">游戏开发</h3>
+<p class="text-gray-600">创意游戏设计与开发，打造独特的游戏体验</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+<img src="https://ai-public.mastergo.com/ai/img_res/6ae6f79267a1a7cab5171278d144e5aa.jpg" class="w-full h-48 object-cover rounded-lg mb-6" alt="小程序开发">
+<h3 class="text-2xl font-bold mb-4">小程序开发</h3>
+<p class="text-gray-600">专业的小程序开发团队，提供定制化解决方案</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pricing" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16">价格方案</h2>
+<div class="grid grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-300">
+<h3 class="text-xl font-bold mb-4">体验版</h3>
+<div class="text-3xl font-bold mb-6">¥999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>单页面开发</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>基础界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>在线技术支持</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:scale-105 transition-transform duration-300">
+<h3 class="text-2xl font-bold mb-4">入门版</h3>
+<div class="text-4xl font-bold mb-8 text-primary">¥2,999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center text-base"><i class="fas fa-check text-primary mr-2"></i>三页面开发</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>精美界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>基础功能集成</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg border-2 border-primary relative hover:scale-105 transition-transform duration-300">
+<div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-sm font-bold">推荐</div>
+<h3 class="text-2xl font-bold mb-4 text-primary">标准版</h3>
+<div class="text-3xl font-bold mb-6">¥4,999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>五页面开发</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>高质界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>标准功能集成</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+<h3 class="text-xl font-bold mb-4">基础版</h3>
+<div class="text-3xl font-bold mb-6">¥9,999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>多页面开发</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>标准界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>基础技术支持</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg border-2 border-primary relative">
+<div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm !rounded-button">推荐</div>
+<h3 class="text-xl font-bold mb-4">专业版</h3>
+<div class="text-3xl font-bold mb-6">¥19,999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>高级功能开发</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>专业界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>7*24小时支持</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>一年免费维护</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+<h3 class="text-xl font-bold mb-4">企业版</h3>
+<div class="text-3xl font-bold mb-6">¥39,999<span class="text-base font-normal text-gray-600">/起</span></div>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>定制化方案</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>高端界面设计</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>专属技术团队</li>
+<li class="flex items-center text-sm"><i class="fas fa-check text-primary mr-2"></i>终身技术支持</li>
+</ul>
+<button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-opacity-90 text-base font-semibold">立即咨询</button>
+</div>
+</div>
+</div>
+</section>
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16">案例展示</h2>
+<div class="grid grid-cols-3 gap-8">
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/0025c39b8ec02170428ab742f0c37603.jpg" class="w-full rounded-lg shadow-lg" alt="音乐制作案例">
+</div>
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/3d2854547b5c8fdd38b4dbb2a0c55b90.jpg" class="w-full rounded-lg shadow-lg" alt="游戏开发案例">
+</div>
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/60a646cca8b64f6e51f79c94aff1b5b9.jpg" class="w-full rounded-lg shadow-lg" alt="小程序案例">
+</div>
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/3815a494255d55e975ce408a809911e6.jpg" class="w-full rounded-lg shadow-lg" alt="音乐可视化案例">
+</div>
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/8674a1b971454767b1bd5e66743c0190.jpg" class="w-full rounded-lg shadow-lg" alt="游戏角色设计">
+</div>
+<div class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden">
+<img class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://ai-public.mastergo.com/ai/img_res/8752ed1229a2b603b6abee6e1ed99962.jpg" class="w-full rounded-lg shadow-lg" alt="电商小程序">
+</div>
+</div>
+</div>
+</section>
+<section id="advantages" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16">服务优势</h2>
+<div class="grid grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="fas fa-clock text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">准时交付</h3>
+<p class="text-gray-600">严格把控项目进度，确保按时交付</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="fas fa-shield-alt text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">品质保证</h3>
+<p class="text-gray-600">专业团队把关，确保产品质量</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="fas fa-handshake text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">优质服务</h3>
+<p class="text-gray-600">全程专人对接，快速响应需求</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="fas fa-code text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">技术实力</h3>
+<p class="text-gray-600">资深开发团队，技术领先</p>
+</div>
+</div>
+</div>
+</section>
+<section id="process" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-16">开发流程</h2>
+<div class="grid grid-cols-5 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+<h3 class="text-xl font-bold mb-4">需求沟通</h3>
+<p class="text-gray-600">深入了解客户需求，制定解决方案</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+<h3 class="text-xl font-bold mb-4">方案设计</h3>
+<p class="text-gray-600">专业团队设计，打造完美方案</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+<h3 class="text-xl font-bold mb-4">开发实现</h3>
+<p class="text-gray-600">高效开发，定期汇报进度</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">4</div>
+<h3 class="text-xl font-bold mb-4">测试优化</h3>
+<p class="text-gray-600">全面测试，持续优化完善</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">5</div>
+<h3 class="text-xl font-bold mb-4">交付上线</h3>
+<p class="text-gray-600">正式发布，持续技术支持</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <a href="index.html" class="font-['Pacifico'] text-4xl text-white mb-4 inline-block">惠鑫工作室</a>
+                <p class="text-gray-400 mb-4">专注于音乐、小游戏和小程序开发</p>
+                                    <div class="flex space-x-4">
+                                        <div class="relative group">
+                                            <a href="#" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-weixin"></i></a>
+                                            <div class="absolute hidden group-hover:block bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 h-32 bg-white p-1 rounded shadow-lg">
+                                                <img src="images/wechat-qr.jpg" alt="微信二维码" class="w-full h-full object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="relative group">
+                                            <a href="#" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-tiktok"></i></a>
+                                            <div class="absolute hidden group-hover:block bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 h-32 bg-white p-1 rounded shadow-lg>
+                                                <img src="images/douyin-qr.jpg" alt="抖音二维码" class="w-full h-full object-cover">
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-primary">首页</a></li>
+                    <li><a href="music.html" class="text-gray-400 hover:text-primary">音乐制作</a></li>
+                    <li><a href="service.html" class="text-gray-400 hover:text-primary">服务项目</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-primary">关于我们</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-primary">联系我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i> hxgzs@foxmail.com</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">工作时间</h3>
+                <p class="text-gray-400">周一至周五: 9:00 - 18:00</p>
+                <p class="text-gray-400">周六至周日：10:00 - 17:00</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>© 2024 惠鑫工作室. 保留所有权利.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

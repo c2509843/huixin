@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>音乐制作 - 惠鑫工作室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#8B5CF6',
+secondary: '#EC4899'
+},
+borderRadius: {
+'none': '0px',
+'sm': '2px',
+DEFAULT: '4px',
+'md': '8px',
+'lg': '12px',
+'xl': '16px',
+'2xl': '20px',
+'3xl': '24px',
+'full': '9999px',
+'button': '4px'
+}
+}
+}
+}
+</script>
+<style>
+body {
+min-height: 1024px;
+}
+.hero-section {
+background-image: url('https://ai-public.mastergo.com/ai/img_res/267e314a0ad8add676bfa94709f72a10.jpg');
+background-size: cover;
+background-position: center;
+}
+.music-player input[type="range"] {
+-webkit-appearance: none;
+width: 100%;
+height: 4px;
+background: #e0e0e0;
+border-radius: 2px;
+outline: none;
+}
+.music-player input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 12px;
+height: 12px;
+background: #FF6B6B;
+border-radius: 50%;
+cursor: pointer;
+}
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between items-center h-20">
+<a href="index.html" class="font-['Pacifico'] text-4xl text-primary flex items-center">
+惠鑫工作室
+</a>
+<div class="flex space-x-12">
+<a href="index.html" class="nav-link text-gray-700 hover:text-primary text-lg">首页</a>
+<a href="music.html" class="nav-link text-gray-700 hover:text-primary text-lg active">音乐制作</a>
+<a href="service.html" class="nav-link text-gray-700 hover:text-primary text-lg">服务项目</a>
+<a href="about.html" class="nav-link text-gray-700 hover:text-primary text-lg">关于我们</a>
+<a href="contact.html" class="nav-link text-gray-700 hover:text-primary text-lg">联系我们</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="hero-section min-h-[600px] flex items-center pt-24 pb-16">
+<div class="max-w-7xl mx-auto px-4">
+<div class="bg-white bg-opacity-95 p-12 rounded-lg max-w-2xl backdrop-blur-sm">
+<h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">专业音乐制作服务</h1>
+<p class="text-xl text-gray-700 mb-8 leading-relaxed">让您的音乐梦想成为现实，我们提供专业的录音、混音和母带处理服务</p>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button text-lg hover:bg-opacity-90 flex items-center">
+<i class="fas fa-headphones-alt mr-2"></i>
+立即咨询
+</button>
+<button class="border-2 border-primary text-primary px-8 py-3 !rounded-button text-lg hover:bg-primary hover:text-white transition-colors flex items-center">
+<i class="fas fa-play mr-2"></i>
+查看案例
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">精选音乐作品</h2>
+<div class="grid grid-cols-3 gap-8">
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/2870ce31692b55e37386810fe8080619.jpg" class="w-full h-64 object-cover" alt="音乐作品1">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">天亮以后</h3>
+<span class="inline-block bg-secondary text-white px-3 py-1 !rounded-button text-sm mb-4">流行音乐</span>
+<p class="text-gray-600 mb-4">温暖治愈的都市情感故事</p>
+<button class="bg-primary text-white w-full py-2 !rounded-button hover:bg-opacity-90 flex items-center justify-center space-x-2 play-button" data-audio="music/天亮以后.mp3">
+  <i class="fas fa-play"></i>
+  <span>试听作品</span>
+</button>
+<audio class="hidden" src="music/天亮以后.mp3"></audio>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/3196a33753f7f7e852e4fe238d6d5b44.jpg" class="w-full h-64 object-cover" alt="音乐作品2">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">汽水味情书</h3>
+<span class="inline-block bg-secondary text-white px-3 py-1 !rounded-button text-sm mb-4">流行音乐</span>
+<p class="text-gray-600 mb-4">清甜浪漫的青春恋曲</p>
+<button class="bg-primary text-white w-full py-2 !rounded-button hover:bg-opacity-90 flex items-center justify-center space-x-2 play-button" data-audio="music/汽水味情书.mp3">
+  <i class="fas fa-play"></i>
+  <span>试听作品</span>
+</button>
+<audio class="hidden" src="music/汽水味情书.mp3"></audio>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/bbb82b08ad17465dea81bf90d45e029b.jpg" class="w-full h-64 object-cover" alt="音乐作品3">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">差一步的我们</h3>
+<span class="inline-block bg-secondary text-white px-3 py-1 !rounded-button text-sm mb-4">流行音乐</span>
+<p class="text-gray-600 mb-4">触动人心的遗憾故事</p>
+<button class="bg-primary text-white w-full py-2 !rounded-button hover:bg-opacity-90 flex items-center justify-center space-x-2 play-button" data-audio="music/差一步的我们.mp3">
+  <i class="fas fa-play"></i>
+  <span>试听作品</span>
+</button>
+<audio class="hidden" src="music/差一步的我们.mp3"></audio>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-b from-white to-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center mb-4">制作流程</h2>
+<p class="text-gray-600 text-center mb-16 max-w-2xl mx-auto">专业的音乐制作流程，确保每一个作品都能达到最佳效果</p>
+<div class="grid grid-cols-4 gap-12">
+<div class="text-center">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white mx-auto flex items-center justify-center mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+<i class="fas fa-comments text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">需求沟通</h3>
+<p class="text-gray-600">深入了解您的音乐创作理念和需求</p>
+</div>
+<div class="text-center">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white mx-auto flex items-center justify-center mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+<i class="fas fa-lightbulb text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">创意构思</h3>
+<p class="text-gray-600">制定完整的音乐制作方案</p>
+</div>
+<div class="text-center">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white mx-auto flex items-center justify-center mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+<i class="fas fa-microphone text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">录音制作</h3>
+<p class="text-gray-600">使用专业设备进行录制</p>
+</div>
+<div class="text-center">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-secondary text-white mx-auto flex items-center justify-center mb-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+<i class="fas fa-sliders-h text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">混音母带</h3>
+<p class="text-gray-600">精心调制最终音频效果</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">专业设备展示</h2>
+<div class="grid grid-cols-4 gap-8">
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/4ab9f2a32d1bf7fc32394310f2445001.jpg" class="w-full h-48 object-cover" alt="设备1">
+<div class="p-4">
+<h3 class="text-lg font-bold mb-2">专业录音麦克风</h3>
+<p class="text-gray-600 text-sm">顶级音质捕捉设备</p>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/222b4918540c8ff66a63d612d9ee557d.jpg" class="w-full h-48 object-cover" alt="设备2">
+<div class="p-4">
+<h3 class="text-lg font-bold mb-2">专业音频接口</h3>
+<p class="text-gray-600 text-sm">高保真信号转换</p>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/a520a532ae919ce39136987cd73fcba9.jpg" class="w-full h-48 object-cover" alt="设备3">
+<div class="p-4">
+<h3 class="text-lg font-bold mb-2">调音台</h3>
+<p class="text-gray-600 text-sm">专业音频处理设备</p>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+<img src="https://ai-public.mastergo.com/ai/img_res/76a076eb345e8264caa9157e4cb6b9a3.jpg" class="w-full h-48 object-cover" alt="设备4">
+<div class="p-4">
+<h3 class="text-lg font-bold mb-2">监听音箱</h3>
+<p class="text-gray-600 text-sm">精准音频还原设备</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">音乐风格</h2>
+<div class="grid grid-cols-5 gap-8">
+<div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+<img src="https://ai-public.mastergo.com/ai/img_res/2ab89ab3ae20acbc9ce74b9147505c64.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="流行音乐">
+<h3 class="text-xl font-bold mb-2">流行音乐</h3>
+<p class="text-gray-600 text-sm">现代流行音乐制作</p>
+</div>
+<div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+<img src="https://ai-public.mastergo.com/ai/img_res/eb05ba4e48c6b322245acb4257466a19.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="电子音乐">
+<h3 class="text-xl font-bold mb-2">电子音乐</h3>
+<p class="text-gray-600 text-sm">电子音乐制作与混音</p>
+</div>
+<div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+<img src="https://ai-public.mastergo.com/ai/img_res/ada5a75cfee26739012b814159632d68.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="说唱音乐">
+<h3 class="text-xl font-bold mb-2">说唱音乐</h3>
+<p class="text-gray-600 text-sm">说唱音乐制作编曲</p>
+</div>
+<div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+<img src="https://ai-public.mastergo.com/ai/img_res/fb3e5ea0051c2f4c95d10a9820fc7339.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="民谣音乐">
+<h3 class="text-xl font-bold mb-2">民谣音乐</h3>
+<p class="text-gray-600 text-sm">民谣音乐录制制作</p>
+</div>
+<div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+<img src="https://ai-public.mastergo.com/ai/img_res/50564446ce741a9943c1eaad8cf1cf4b.jpg" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="摇滚音乐">
+<h3 class="text-xl font-bold mb-2">摇滚音乐</h3>
+<p class="text-gray-600 text-sm">摇滚乐队录音制作</p>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-4xl font-bold text-center mb-4">常见问题</h2>
+<p class="text-gray-600 text-center mb-16 max-w-2xl mx-auto">解答您关心的问题，让合作更加顺畅</p>
+<div class="max-w-3xl mx-auto space-y-4">
+<div class="bg-white rounded-lg shadow-lg">
+<button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center">
+<span>音乐制作周期大概需要多久？</span>
+<i class="fas fa-chevron-down text-primary"></i>
+</button>
+<div class="px-6 py-4 border-t">
+<p class="text-gray-600">一般情况下，单曲制作周期为 2-3 周，具体时间取决于音乐风格和制作复杂度。我们会在项目开始前与您确认具体时间计划。</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg">
+<button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center">
+<span>音乐制作的价格是如何计算的？</span>
+<i class="fas fa-chevron-down text-primary"></i>
+</button>
+<div class="px-6 py-4 border-t">
+<p class="text-gray-600">价格根据制作复杂度、使用乐器数量、录音时长等因素综合计算。我们会提供详细的报价方案，确保价格透明合理。</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg">
+<button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center">
+<span>音乐版权归属问题如何处理？</span>
+<i class="fas fa-chevron-down text-primary"></i>
+</button>
+<div class="px-6 py-4 border-t">
+<p class="text-gray-600">我们会在合作开始前签订详细的版权协议，明确约定音乐作品的版权归属和使用范围，保护双方权益。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-4 gap-8">
+<div>
+<h3 class="font-['Pacifico'] text-2xl mb-4 flex items-center">
+惠鑫工作室
+</h3>
+<p class="text-gray-400">专业的音乐制作、游戏开发、小程序定制服务提供商</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">快速链接</h4>
+<ul class="space-y-2">
+<li><a href="index.html" class="text-gray-400 hover:text-white">首页</a></li>
+<li><a href="music.html" class="text-gray-400 hover:text-white">音乐制作</a></li>
+<li><a href="service.html" class="text-gray-400 hover:text-white">服务项目</a></li>
+<li><a href="about.html" class="text-gray-400 hover:text-white">关于我们</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-white">联系我们</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">联系方式</h4>
+<p class="text-gray-400 mb-2">邮箱：hxgzs@foxmail.com</p>
+<div class="flex space-x-4">
+    <div class="relative group">
+        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-tiktok"></i></a>
+        <div class="absolute hidden group-hover:block bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 h-32 bg-white p-1 rounded shadow-lg">
+            <img src="images/douyin-qr.jpg" alt="抖音二维码" class="w-full h-full object-cover">
+        </div>
+    </div>
+    <div class="relative group">
+        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-weixin"></i></a>
+        <div class="absolute hidden group-hover:block bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-32 h-32 bg-white p-1 rounded shadow-lg">
+            <img src="images/wechat-qr.jpg" alt="微信二维码" class="w-full h-full object-cover">
+        </div>
+    </div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">工作时间</h4>
+<p class="text-gray-400">周一至周五：9:00 - 18:00</p>
+<p class="text-gray-400">周六至周日：10:00 - 17:00</p>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>© 2024 惠鑫工作室. 保留所有权利</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有播放按钮
+    const playButtons = document.querySelectorAll('.play-button');
+    let currentAudio = null;
+
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const audioSrc = this.getAttribute('data-audio');
+            const audio = this.nextElementSibling;
+            
+            // 如果点击的是当前正在播放的音频
+            if (currentAudio === audio) {
+                if (audio.paused) {
+                    audio.play();
+                    this.innerHTML = '<i class="fas fa-pause"></i><span>暂停试听</span>';
+                } else {
+                    audio.pause();
+                    this.innerHTML = '<i class="fas fa-play"></i><span>试听作品</span>';
+                }
+            } else {
+                // 停止当前播放的音频
+                if (currentAudio) {
+                    currentAudio.pause();
+                    const prevButton = currentAudio.previousElementSibling;
+                    prevButton.innerHTML = '<i class="fas fa-play"></i><span>试听作品</span>';
+                }
+                
+                // 播放新音频
+                audio.src = audioSrc;
+                audio.play();
+                this.innerHTML = '<i class="fas fa-pause"></i><span>暂停试听</span>';
+                currentAudio = audio;
+                
+                // 音频结束时恢复按钮状态
+                audio.onended = function() {
+                    button.innerHTML = '<i class="fas fa-play"></i><span>试听作品</span>';
+                };
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
